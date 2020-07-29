@@ -1,0 +1,30 @@
+a.button {
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: $black;
+    color: $white;
+    border: 2px solid $black;
+    transition: border .2s, background-color .5s;
+    @include breakpoint (large up) {
+        font-size: 1.1rem;
+    }
+    &:hover {
+        border:2px solid transparent;
+    }
+    &.button-white {
+        background-color: $white;
+        color: $black;
+        &:hover {
+            background-color:$primary-color;
+            color:$white;
+        }
+    }
+    &.alt {
+        &:hover {
+            border-color:$black;
+            background-color:$black;
+            color:$white;
+        }
+    }
+}

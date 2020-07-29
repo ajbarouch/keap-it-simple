@@ -1,0 +1,100 @@
+.top-bar {
+    font-family: 'Roboto', sans-serif;
+    padding: .5rem 1.5rem;
+    @include breakpoint(medium down) {
+        background-color:$primary-color;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    @include breakpoint (small down) {
+        flex-direction: column;
+    }
+    .top-bar-left {
+        height: 100%;
+        @include breakpoint(small down) {
+            flex-direction: column;
+            width: 100%;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        ul {
+            @include breakpoint (medium down) {
+                background-color:$primary-color;
+            }
+            @include breakpoint(small down) {
+                margin-top:30px;
+            }
+            li {
+                a {
+                    @include breakpoint (medium down) {
+                        color:$white;
+                    }
+                }
+            }
+        }
+    }
+    .top-bar-right {
+        @include breakpoint (small down) {
+            display: flex;
+            margin-bottom:20px;
+            flex-direction: column;
+        }
+        a {
+            margin:10px;
+        }
+    }
+}
+
+
+.menu {
+    @include breakpoint(small down) {
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        @include breakpoint(small down) {
+            width: 100%;
+            justify-content: flex-start;
+        }
+        &.menu-logo {
+            @include breakpoint(large up) {
+                margin-right: 40px;
+            }
+            @include breakpoint(medium down) {
+                display: none;
+            }
+            img {
+                max-width: 100px;
+            }
+        }
+        a {
+            color: $black;
+            font-size: 1.125rem;
+            line-height: 1.25rem;
+            @include breakpoint (large up) {
+                font-size: 1.5rem;
+                line-height: 1.1;
+            }
+            @include breakpoint (small down) {
+                text-transform: uppercase;
+                width: 100%;
+                text-align:center;
+            }
+        }
+    }
+}
+
+//mobile top bar
+@include breakpoint(medium down) {
+    .title-bar {
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        img {
+            max-width: 50px;
+        }
+    }
+}

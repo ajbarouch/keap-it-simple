@@ -1,0 +1,22 @@
+section#hero-section {
+    background-image: url('../keap-hero.jpg');
+    background-position: left;
+    background-size: cover;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(small down) {
+        height: 400px;
+    }
+    button {
+        margin-top:40px;
+        padding:.8rem 1.5rem;
+        height:100px;
+        width: 100px;
+        border-radius: 50%;
+        line-height: 1.2;
+        font-weight: bold;
+        font-family: 'Noto Serif';
+    }
+}
