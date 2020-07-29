@@ -7,12 +7,15 @@ w = window.innerWidth;
 advertButton = document.getElementById('advert-button');
 
 function clickHideMenu() {
-    menu.setAttribute("style", "display: none;");    
+    menu.setAttribute("style", "display: none;");
 }
 
 function showAdvertSection(){
     var aSection = document.getElementById('advert-section');
-    aSection.setAttribute("style", "display: block;");    
+    aSection.setAttribute("style", "display: block;");
+    aSection.scrollIntoView({
+        behavior: 'smooth'
+    });
 }
 
 window.addEventListener("resize", function() {
