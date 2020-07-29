@@ -18,5 +18,11 @@ section#hero-section {
         line-height: 1.2;
         font-weight: bold;
         font-family: 'Noto Serif';
+        text-align: center;
+        @include breakpoint (small down) {
+            height:90px;
+            width: 90px;
+            font-size: 14px;
+        }
     }
 }
